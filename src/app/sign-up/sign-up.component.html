@@ -1,0 +1,16 @@
+<app-log-in [signUp]="signUp" hidden></app-log-in>
+<div class="topcontainer">
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form (ngSubmit)="OnSignUp()">
+            <input type="text" name="username" placeholder="Username" required [(ngModel)]="signUpObj.userName">
+            <input type="email" name="email" placeholder="Email" required [(ngModel)]="signUpObj.email">
+            <input type="password" name="password" placeholder="Password" required [(ngModel)]="signUpObj.password">
+            <button type="submit" (click)="OnSignUp()">Sign Up</button>
+        </form>
+        <div *ngIf="isSignedUp">
+            <a [routerLink]="'/log-in'">Log-In</a>
+        </div>
+    </div>
+    </div>
+

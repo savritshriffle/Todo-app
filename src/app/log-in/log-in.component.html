@@ -1,0 +1,10 @@
+<div class="topcontainer">
+    <div class="container">
+        <h2>Log-In Here</h2>
+        <form (ngSubmit)="OnLogIn()">
+            <input type="email" name="email" placeholder="Email" required [(ngModel)]="logInObj.email">
+            <input type="password" name="password" placeholder="Password" required [(ngModel)]="logInObj.password">
+            <button type="submit" (click)="OnLogIn()">Log-In</button>
+        </form>
+    </div>
+    </div>

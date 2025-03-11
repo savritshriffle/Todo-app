@@ -1,0 +1,38 @@
+<h2 class="text-center mt-3">Stored Data</h2>
+<div class="container-fuild mt-5">
+  <div *ngFor="let user of userDataList">
+    <h1>{{user | json}}</h1>
+  </div>
+  <table class="table table-bordered table-striped text-center">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Father Name</th>
+        <th>Mother Name</th>
+        <th>Contact</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userDataList">
+        <td>{{ user.id }}</td>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.fatherName }}</td>
+        <td>{{ user.motherName }}</td>
+        <td>{{ user.contact }}</td>
+        <td>
+          <button (click)="edit(user.id)" class="btn btn-warning btn-sm m-1 px-3">Edit</button>
+          <button (click)="delete(user.id)" class="btn btn-danger btn-sm m-1 px-1">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="text-danger text-center" *ngIf="!userDataList || userDataList.length === 0">No data available.</p>
+</div>
+
+
+<!-- <button type="submit" (click)="edit()">Edit</button> -->
+<!-- <button type="submit" (click)="delete()">Edit</button> -->

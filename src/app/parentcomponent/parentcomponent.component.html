@@ -1,0 +1,56 @@
+<h2 class="text-center">User Form</h2>
+
+<div class="container mt-3">
+  <form (ngSubmit)="FormData()">
+    <input 
+    type="number" 
+    class="form-control mb-2" 
+    name="id" placeholder="ID" 
+    [(ngModel)]="userForm.value.id" 
+    required>
+    <input 
+    type="text" 
+    class="form-control mb-2" 
+    name="firstName" placeholder="First Name" 
+    [(ngModel)]="userForm.value.firstName" 
+    required>
+    <input 
+    type="text" 
+    class="form-control mb-2" 
+    name="lastName" 
+    placeholder="Last Name" 
+    [(ngModel)]="userForm.value.lastName" 
+    required>
+    <input 
+    type="text" 
+    class="form-control mb-2" 
+    name="fatherName" 
+    placeholder="Father Name" 
+    [(ngModel)]="userForm.value.fatherName" 
+    required>
+    <input 
+    type="text" 
+    class="form-control mb-2" 
+    name="motherName" 
+    placeholder="Mother Name" 
+    [(ngModel)]="userForm.value.motherName" 
+    required>
+    <input 
+    type="text" 
+    class="form-control mb-2" 
+    name="contact" 
+    placeholder="Contact" 
+    [(ngModel)]="userForm.value.contact" 
+    required>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
+
+<hr>
+
+
+<app-childcomponent 
+  [userDataList]="storedDataList" 
+  (editUser)="GetData($event)" 
+  (deleteUser)="deleteUser($event)">
+</app-childcomponent>

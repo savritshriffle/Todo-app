@@ -1,0 +1,19 @@
+.nav{
+    justify-content: space-around;
+    background-color: navy;
+}
+.ul{
+    display: flex;
+    gap: 200px;
+    list-style: none;
+    
+}
+.a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+.a:hover{
+    color: red;
+}
