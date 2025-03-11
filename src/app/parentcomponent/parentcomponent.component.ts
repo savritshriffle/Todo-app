@@ -11,7 +11,7 @@ export class ParentcomponentComponent implements OnInit {
   selectedUserId: string | null = null; 
 
   constructor(private fb: FormBuilder) { // Formbuilder used to build a form and add a manully key data 
-    this.userForm = this.fb.group({
+    this.userForm = this.fb.group ({
       id: '',
       firstName: '',
       lastName: '',
